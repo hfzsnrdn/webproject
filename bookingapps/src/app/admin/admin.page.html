@@ -1,0 +1,39 @@
+<ion-app>
+    <ion-header translucent>
+      <ion-toolbar color="danger">
+        <ion-title class="ion-text-center">Admin</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+  <ion-content fullscreen>
+    
+    <ion-card>
+    <img src="./assets/booking.jpg" />
+      <ion-item color="dark" [routerLink]="['/managebooking']" routerLinkActive="router-link-active">
+        <ion-card-header>
+          <ion-card-subtitle color="light" class="ion-text-uppercase">View Booking</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  </ion-card>
+
+      <ion-card>
+        <img src="./assets/enquiry.png" />
+          <ion-item color="dark" [routerLink]="['/enquirym']" routerLinkActive="router-link-active">
+            <ion-card-header>
+              <ion-card-subtitle color="light" class="ion-text-uppercase">Enquiry Message</ion-card-subtitle>
+            </ion-card-header>
+          </ion-item>
+      </ion-card>
+
+    
+          <ion-button expand="block" color="danger" [routerLink]="['/singup']">
+            <ion-icon slot="end" name="log-out-outline"></ion-icon>
+            Log Out
+          </ion-button>
+    
+    
+      
+
+  </ion-content>
+</ion-app>
+

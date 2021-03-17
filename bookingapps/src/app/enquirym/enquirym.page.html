@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons> 
+    <ion-title class="ion-text-center">Message</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+      <ion-item-sliding *ngFor="let contact of contact">
+        <ion-item class="no-padding">
+          <ion-label>
+            <h2>{{ contact.name }}</h2>
+            <p>{{ contact.email }}</p>
+            <p>{{ contact.enquiry }}</p>
+            <p>{{ contact.message }}</p>
+          </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

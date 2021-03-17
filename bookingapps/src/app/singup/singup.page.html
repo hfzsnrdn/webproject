@@ -1,0 +1,24 @@
+<ion-app>
+  <ion-content fullscreen>
+    <ion-card class="ion-no-margin">
+      <img src="./assets/background1.jpeg" />
+      <ion-card-header>
+        <ion-card-title color="light" class="ion-text-uppercase"></ion-card-title><br>
+        <ion-card-subtitle class="ion-text-uppercase">Get started by login to your account now</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="signup-btns">
+          <ion-button [routerLink]="['/register']" color="danger" fill="solid" shape="round" class="ion-text-lowercase">Sign up with email</ion-button>
+        </div>
+        <div class="login-link">
+          <ion-button [routerLink]="['/login']" color="medium" fill='clear'>Existing user? Login here</ion-button>
+        </div>
+        <div class="admin-log">
+          <ion-button [routerLink]="['/loginadmin']" color="medium" fill='clear'>Login as admin</ion-button>
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-content>
+</ion-app>

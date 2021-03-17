@@ -1,0 +1,97 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- content begin here -->
+<ion-content fullscreen>
+
+  <!-- header logo -->
+  <ion-item class="pic-card">
+    <img src="./assets/back.jpeg"/>
+  </ion-item>
+
+  <!-- ion slide -->
+  <ion-slides [option]="option" class="ion-margin-top">
+    
+    <ion-slide >
+      <ion-card>
+         <img src="assets/laptop.png"/>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="assets/covid2.png"/>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <img src="assets/covid.png"/>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- item container for input choice -->
+  <ion-card>
+    <img src="./assets/court.jpg" />
+      <ion-item [routerLink]="['/bola']" routerLinkActive="router-link-active">
+        <ion-card-header>
+          <ion-card-subtitle class="ion-text-uppercase">KUPTM Futsal Court</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <img src="./assets/musicsquare.jpg" />
+      <ion-item [routerLink]="['/music']" routerLinkActive="router-link-active">
+        <ion-card-header>
+          <ion-card-subtitle class="ion-text-uppercase">Kuptm Music Studio</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <img src="./assets/studentsquare.jpg" />
+      <ion-item [routerLink]="['/squere']" routerLinkActive="router-link-active">
+        <ion-card-header>
+          <ion-card-subtitle class="ion-text-uppercase">KUPTM Student Square</ion-card-subtitle>
+        </ion-card-header>
+      </ion-item>
+  </ion-card>
+
+    <ion-button expand="block" color="danger" [routerLink]="['/futsal']">
+      <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+      Start Booking
+    </ion-button>
+    
+</ion-content>
+
+  <!-- Item footer  -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs> 
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="booking" [routerLink]="['/booking']">
+          <ion-icon name="bookmark-outline"></ion-icon>
+          <ion-label>Booking</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="home" [routerLink]="['/home']">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="setting" [routerLink]="['/setting']">
+          <ion-icon name="cog-outline"></ion-icon>
+          <ion-label>Setting</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+
+

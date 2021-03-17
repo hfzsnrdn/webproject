@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="danger">
+ <ion-title class="ion-text-center">Edit Booking</ion-title>
+ <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+ </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+     <div class="ion-padding">
+
+      <ion-item> 
+        <ion-label position="floating">Full Name</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.name" required></ion-input> 
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">Contact No</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.contact" required></ion-input> 
+      </ion-item> 
+
+      <ion-item> 
+      <ion-label>Select Venue</ion-label> 
+        <ion-select value="General" okText="Okay" [(ngModel)]="booking.venue" cancelText="Cancel"> 
+          <ion-select-option value="Futsal Court">Futsal Court</ion-select-option>
+          <ion-select-option value="Music Studio">Music Studio</ion-select-option> 
+          <ion-select-option value="Student Square">Student Square</ion-select-option>  
+        </ion-select>
+      </ion-item>
+      
+      <ion-item> 
+        <ion-label>Start Date</ion-label> 
+        <ion-datetime placeholder="Select Date" [(ngModel)]="booking.datemula"></ion-datetime>
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label>End Date</ion-label> 
+        <ion-datetime placeholder="Select Date" [(ngModel)]="booking.datetamat"></ion-datetime>
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">Start Time</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.timemula" required></ion-input> 
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">End Time</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.timetamat" required></ion-input> 
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">Used For (reason)</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.reason" required></ion-input> 
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">Equipment Needed (if any)</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.need"></ion-input> 
+      </ion-item>
+
+      <ion-item> 
+        <ion-label position="floating">Status</ion-label> 
+        <ion-input type="text" [(ngModel)]="booking.status"></ion-input> 
+      </ion-item>
+
+        <ion-button color="danger" (click)="updatePost(booking)" expand="block" fill="clear" shape="round">
+          <ion-icon slot="end" name="send"></ion-icon>
+          Update
+        </ion-button>
+ </div>
+</ion-content>
